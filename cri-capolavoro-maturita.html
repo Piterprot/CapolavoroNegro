@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRI Capolavoro Maturità</title>
+  <meta name="description" content="Sito web per il capolavoro di maturità: il mio percorso come volontario della Croce Rossa Italiana nel Comitato di Rivoli." />
+  <meta name="theme-color" content="#b3182b" />
+  <meta property="og:title" content="CRI Capolavoro Maturità" />
+  <meta property="og:description" content="Il mio percorso come volontario della Croce Rossa Italiana: servizio, competenze, crescita personale e ruolo ICT." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root, [data-theme="light"] {
+      --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+      --text-sm: clamp(0.875rem, 0.8rem + 0.35vw, 1rem);
+      --text-base: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+      --text-lg: clamp(1.125rem, 1rem + 0.75vw, 1.5rem);
+      --text-xl: clamp(1.5rem, 1.2rem + 1.25vw, 2.25rem);
+      --text-2xl: clamp(2rem, 1.2rem + 2.5vw, 3.8rem);
+      --text-3xl: clamp(2.6rem, 1rem + 4vw, 5rem);
+
+      --space-1: .25rem;
+      --space-2: .5rem;
+      --space-3: .75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;
+      --space-20: 5rem;
+      --space-24: 6rem;
+      --space-32: 8rem;
+
+      --color-bg: #f7f4f2;
+      --color-surface: #ffffff;
+      --color-surface-2: #fcf8f7;
+      --color-surface-offset: #f2ece9;
+      --color-surface-dynamic: #ebe2de;
+      --color-divider: #e6d8d2;
+      --color-border: rgba(57, 32, 25, 0.12);
+      --color-text: #241916;
+      --color-text-muted: #6d5b56;
+      --color-text-faint: #a48f88;
+      --color-text-inverse: #fff6f4;
+      --color-primary: #b3182b;
+      --color-primary-hover: #8f1221;
+      --color-primary-active: #6c0f19;
+      --color-primary-highlight: #f4d7dc;
+      --color-success: #2b6b46;
+      --color-warning: #91521c;
+      --shadow-sm: 0 1px 2px rgba(25, 11, 9, 0.05), 0 4px 12px rgba(25, 11, 9, 0.04);
+      --shadow-md: 0 8px 24px rgba(25, 11, 9, 0.08), 0 2px 6px rgba(25, 11, 9, 0.05);
+      --shadow-lg: 0 18px 40px rgba(25, 11, 9, 0.14), 0 4px 12px rgba(25, 11, 9, 0.08);
+      --radius-sm: .375rem;
+      --radius-md: .75rem;
+      --radius-lg: 1.1rem;
+      --radius-xl: 1.5rem;
+      --radius-full: 999px;
+      --transition-interactive: 180ms cubic-bezier(0.16, 1, 0.3, 1);
+      --content-default: 1120px;
+      --content-wide: 1280px;
+      --font-display: 'Instrument Serif', Georgia, serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --color-bg: #161112;
+      --color-surface: #1d1617;
+      --color-surface-2: #231b1d;
+      --color-surface-offset: #291f21;
+      --color-surface-dynamic: #35292c;
+      --color-divider: #392d30;
+      --color-border: rgba(255, 239, 235, 0.10);
+      --color-text: #f5eae7;
+      --color-text-muted: #cbb8b2;
+      --color-text-faint: #9e8881;
+      --color-text-inverse: #201414;
+      --color-primary: #ed4b5a;
+      --color-primary-hover: #f16673;
+      --color-primary-active: #f58b95;
+      --color-primary-highlight: rgba(237, 75, 90, 0.12);
+      --color-success: #7bc691;
+      --color-warning: #e0a15f;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.24);
+      --shadow-md: 0 8px 24px rgba(0,0,0,.32);
+      --shadow-lg: 0 18px 40px rgba(0,0,0,.42);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme]) {
+        --color-bg: #161112;
+        --color-surface: #1d1617;
+        --color-surface-2: #231b1d;
+        --color-surface-offset: #291f21;
+        --color-surface-dynamic: #35292c;
+        --color-divider: #392d30;
+        --color-border: rgba(255, 239, 235, 0.10);
+        --color-text: #f5eae7;
+        --color-text-muted: #cbb8b2;
+        --color-text-faint: #9e8881;
+        --color-text-inverse: #201414;
+        --color-primary: #ed4b5a;
+        --color-primary-hover: #f16673;
+        --color-primary-active: #f58b95;
+        --color-primary-highlight: rgba(237, 75, 90, 0.12);
+      }
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: none;
+      text-size-adjust: none;
+      scroll-padding-top: 6rem;
+    }
+    body {
+      min-height: 100dvh;
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      line-height: 1.65;
+      color: var(--color-text);
+      background:
+        radial-gradient(circle at top left, color-mix(in srgb, var(--color-primary) 8%, transparent), transparent 28%),
+        linear-gradient(180deg, var(--color-bg), color-mix(in srgb, var(--color-bg) 76%, var(--color-surface) 24%));
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; color: inherit; background: none; border: none; cursor: pointer; }
+    p { max-width: 72ch; text-wrap: pretty; }
+    h1, h2, h3 { line-height: 1.05; text-wrap: balance; }
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 3px;
+      border-radius: var(--radius-sm);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    .skip-link {
+      position: absolute; left: 1rem; top: -10rem;
+      background: var(--color-primary); color: var(--color-text-inverse);
+      padding: var(--space-3) var(--space-4); border-radius: var(--radius-full); z-index: 100;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    .container {
+      width: min(calc(100% - 2rem), var(--content-default));
+      margin-inline: auto;
+    }
+    .wide-container {
+      width: min(calc(100% - 2rem), var(--content-wide));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 40;
+      backdrop-filter: blur(14px);
+      background: color-mix(in srgb, var(--color-bg) 82%, transparent);
+      border-bottom: 1px solid var(--color-border);
+    }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--space-4); min-height: 4.5rem;
+    }
+    .brand {
+      display: flex; align-items: center; gap: var(--space-3);
+      font-size: var(--text-sm); font-weight: 700; letter-spacing: .02em;
+    }
+    .brand-mark {
+      width: 2.5rem; height: 2.5rem; padding: .45rem;
+      border-radius: .8rem;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 18%, var(--color-surface)), var(--color-surface));
+      box-shadow: var(--shadow-sm);
+      color: var(--color-primary);
+    }
+    .brand-stack small {
+      display: block; color: var(--color-text-muted); font-size: var(--text-xs); font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .top-nav {
+      display: none; gap: var(--space-4); align-items: center;
+      font-size: var(--text-sm); color: var(--color-text-muted);
+    }
+    .top-nav a:hover { color: var(--color-primary); }
+    .theme-toggle {
+      width: 2.75rem; height: 2.75rem; display: inline-grid; place-items: center;
+      border: 1px solid var(--color-border); border-radius: var(--radius-full);
+      background: color-mix(in srgb, var(--color-surface) 88%, transparent);
+    }
+
+    main > section {
+      padding-block: clamp(var(--space-12), 8vw, var(--space-24));
+      content-visibility: auto;
+      contain-intrinsic-size: 600px;
+    }
+
+    .hero {
+      padding-top: clamp(var(--space-8), 6vw, var(--space-16));
+      min-height: calc(100dvh - 4.5rem);
+      display: grid; align-items: center;
+    }
+    .hero-grid {
+      display: grid; gap: var(--space-8);
+    }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5rem;
+      padding: .45rem .8rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+    }
+    .hero-copy h1 {
+      margin-top: var(--space-4);
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      letter-spacing: -.03em;
+      max-width: 11ch;
+    }
+    .hero-copy p {
+      margin-top: var(--space-5);
+      color: var(--color-text-muted);
+      font-size: var(--text-base);
+      max-width: 62ch;
+    }
+    .hero-actions {
+      display: flex; flex-wrap: wrap; gap: var(--space-3);
+      margin-top: var(--space-6);
+    }
+    .btn {
+      min-height: 2.9rem; padding: .8rem 1.1rem;
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm); font-weight: 700;
+      display: inline-flex; align-items: center; gap: .65rem;
+      transition: transform var(--transition-interactive), background var(--transition-interactive), color var(--transition-interactive), border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--color-primary); color: var(--color-text-inverse);
+      box-shadow: var(--shadow-md);
+    }
+    .btn-primary:hover { background: var(--color-primary-hover); }
+    .btn-secondary {
+      border: 1px solid var(--color-border);
+      background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    }
+
+    .hero-panel {
+      position: relative;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--color-surface) 84%, transparent), var(--color-surface));
+      border: 1px solid var(--color-border);
+      border-radius: calc(var(--radius-xl) + .2rem);
+      padding: clamp(var(--space-6), 4vw, var(--space-10));
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+    .hero-panel::before {
+      content: "";
+      position: absolute; inset: 0 0 auto 0; height: 5px;
+      background: linear-gradient(90deg, var(--color-primary), color-mix(in srgb, var(--color-primary) 45%, #ffffff));
+    }
+    .metric-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4);
+      margin-bottom: var(--space-6);
+    }
+    .metric {
+      padding: var(--space-4);
+      border-radius: var(--radius-lg);
+      background: color-mix(in srgb, var(--color-surface-offset) 76%, var(--color-surface));
+      border: 1px solid var(--color-border);
+    }
+    .metric strong {
+      display: block; font-size: var(--text-xl); line-height: 1; margin-bottom: .45rem;
+    }
+    .metric span { color: var(--color-text-muted); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .08em; font-weight: 700; }
+    .panel-title {
+      font-size: var(--text-sm); text-transform: uppercase; letter-spacing: .08em; font-weight: 800;
+      color: var(--color-text-muted); margin-bottom: var(--space-4);
+    }
+    .timeline-preview {
+      display: grid; gap: var(--space-4);
+    }
+    .timeline-item {
+      display: grid; grid-template-columns: auto 1fr; gap: var(--space-3);
+      align-items: start;
+      padding-bottom: var(--space-4);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .timeline-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .timeline-dot {
+      width: .85rem; height: .85rem; margin-top: .4rem;
+      border-radius: 50%; background: var(--color-primary);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--color-primary) 18%, transparent);
+    }
+    .timeline-item time {
+      display: block; color: var(--color-text-faint); font-size: var(--text-xs); margin-bottom: .35rem; font-weight: 700;
+    }
+
+    .section-head {
+      display: grid; gap: var(--space-3);
+      margin-bottom: var(--space-8);
+      max-width: 72ch;
+    }
+    .section-head h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      letter-spacing: -.025em;
+    }
+    .section-head p { color: var(--color-text-muted); }
+
+    .story-grid,
+    .impact-grid,
+    .growth-grid,
+    .courses-grid,
+    .footer-grid {
+      display: grid; gap: var(--space-5);
+    }
+
+    .story-card, .impact-card, .growth-card, .course-card, .quote-card, .board-card {
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--color-border);
+      background: color-mix(in srgb, var(--color-surface) 95%, transparent);
+      box-shadow: var(--shadow-sm);
+    }
+    .story-card, .impact-card, .growth-card, .course-card, .board-card { padding: clamp(var(--space-5), 3.4vw, var(--space-8)); }
+    .story-card h3, .impact-card h3, .growth-card h3, .course-card h3, .board-card h3 {
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-3);
+    }
+    .muted { color: var(--color-text-muted); }
+
+    .signature-block {
+      display: grid; gap: var(--space-5);
+      grid-template-columns: 1.1fr .9fr;
+      align-items: stretch;
+    }
+    .quote-card {
+      padding: clamp(var(--space-6), 4vw, var(--space-10));
+      background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 9%, var(--color-surface)), var(--color-surface));
+    }
+    .quote-card blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 2vw + 1rem, 3rem);
+      line-height: 1.06;
+      max-width: 14ch;
+    }
+    .quote-card p { margin-top: var(--space-4); color: var(--color-text-muted); }
+
+    .activities-wrap {
+      display: grid; gap: var(--space-5);
+    }
+    .pillar {
+      border-radius: calc(var(--radius-xl) + .1rem);
+      border: 1px solid var(--color-border);
+      background: linear-gradient(180deg, color-mix(in srgb, var(--color-surface) 94%, transparent), var(--color-surface-2));
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .pillar-head {
+      padding: var(--space-6) var(--space-6) var(--space-4);
+      display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3);
+      border-bottom: 1px solid var(--color-divider);
+    }
+    .pillar-head h3 { font-size: var(--text-lg); }
+    .tag {
+      display: inline-flex; align-items: center; min-height: 2rem; padding: .35rem .75rem;
+      border-radius: var(--radius-full);
+      background: var(--color-primary-highlight);
+      color: var(--color-primary);
+      font-size: var(--text-xs); font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    }
+    .activity-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+      gap: 1px;
+      background: var(--color-divider);
+    }
+    .activity-item {
+      background: var(--color-surface);
+      padding: var(--space-6);
+    }
+    .activity-item h4 {
+      font-size: 1.02rem; margin-bottom: var(--space-3);
+    }
+    .activity-item p { color: var(--color-text-muted); font-size: var(--text-sm); }
+
+    .timeline-full {
+      position: relative;
+      display: grid; gap: var(--space-5);
+      margin-top: var(--space-2);
+    }
+    .timeline-full::before {
+      content: ""; position: absolute; left: .55rem; top: .35rem; bottom: .35rem;
+      width: 2px; background: var(--color-divider);
+    }
+    .timeline-row {
+      position: relative;
+      display: grid; grid-template-columns: 2rem 1fr;
+      gap: var(--space-4);
+    }
+    .timeline-row .bullet {
+      width: 1.15rem; height: 1.15rem; border-radius: 50%;
+      background: var(--color-surface);
+      border: 3px solid var(--color-primary);
+      margin-top: .25rem;
+      z-index: 1;
+    }
+
+    .courses-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+    }
+    .course-card {
+      display: flex; flex-direction: column; gap: var(--space-3);
+      min-height: 100%;
+    }
+    .course-card .course-index {
+      color: var(--color-primary); font-size: var(--text-xs); font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+    }
+
+    .growth-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    }
+    .impact-grid {
+      grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+    }
+    .board-card {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 10%, var(--color-surface)), var(--color-surface));
+    }
+    .board-card::after {
+      content: "08·05·2026";
+      position: absolute; right: var(--space-5); top: var(--space-5);
+      font-size: clamp(2rem, 4vw, 4rem);
+      font-weight: 800; letter-spacing: -.04em;
+      color: color-mix(in srgb, var(--color-primary) 16%, transparent);
+      pointer-events: none;
+    }
+
+    .footer-cta {
+      padding: clamp(var(--space-8), 5vw, var(--space-12));
+      border-radius: calc(var(--radius-xl) + .2rem);
+      background: linear-gradient(135deg, color-mix(in srgb, var(--color-primary) 12%, var(--color-surface)), var(--color-surface));
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-md);
+    }
+    .footer-cta h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-4);
+    }
+    footer {
+      padding: 0 0 var(--space-10);
+    }
+    .footer-grid {
+      grid-template-columns: 1fr auto;
+      align-items: end;
+      gap: var(--space-5);
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      margin-top: var(--space-6);
+    }
+
+    .reveal { opacity: 1; }
+    @supports (animation-timeline: view()) {
+      .reveal {
+        opacity: 0;
+        animation: reveal-fade linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 80%;
+      }
+    }
+    @keyframes reveal-fade { to { opacity: 1; } }
+
+    @media (min-width: 900px) {
+      .top-nav { display: flex; }
+      .hero-grid { grid-template-columns: 1.05fr .95fr; align-items: center; }
+      .story-grid { grid-template-columns: 1fr 1fr; }
+      .impact-grid { grid-template-columns: repeat(4, 1fr); }
+      .signature-block { grid-template-columns: 1.1fr .9fr; }
+      .footer-grid { grid-template-columns: 1fr auto; }
+    }
+
+    @media (max-width: 899px) {
+      .signature-block,
+      .footer-grid,
+      .metric-row { grid-template-columns: 1fr; }
+      .hero-copy h1 { max-width: 12ch; }
+      .board-card::after { position: static; display: block; margin-top: var(--space-5); }
+    }
+
+    @media (max-width: 640px) {
+      .container, .wide-container { width: min(calc(100% - 1.2rem), var(--content-default)); }
+      .site-header { position: sticky; }
+      .header-inner { min-height: 4.2rem; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .btn { justify-content: center; }
+      .pillar-head, .activity-item, .story-card, .impact-card, .growth-card, .course-card, .quote-card, .board-card { padding-inline: var(--space-5); }
+    }
+  </style>
+</head>
+<body>
+  <a href="#contenuto" class="skip-link">Salta al contenuto</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Vai all'inizio della pagina">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M32 12v40"></path>
+            <path d="M12 32h40"></path>
+            <rect x="7" y="7" width="50" height="50" rx="14"></rect>
+          </svg>
+        </span>
+        <span class="brand-stack">
+          Croce Rossa Italiana
+          <small>Capolavoro di maturità</small>
+        </span>
+      </a>
+
+      <nav class="top-nav" aria-label="Navigazione principale">
+        <a href="#storia">La mia storia</a>
+        <a href="#attivita">Attività</a>
+        <a href="#percorso">Percorso</a>
+        <a href="#crescita">Crescita</a>
+        <a href="#direttivo">Direttivo</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Cambia tema">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero" id="home">
+      <div class="wide-container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Volontariato, tecnologia, responsabilità</span>
+          <h1>Dalla scelta di aiutare gli altri a un percorso che mi ha cambiato.</h1>
+          <p>
+            Questo sito racconta la mia esperienza nella Croce Rossa Italiana, Comitato di Rivoli: quasi tre anni di servizio, circa 500 ore svolte, formazione continua e un ruolo attivo tra soccorso, inclusione sociale, giovani, ICT e rappresentanza nel direttivo.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#attivita">Esplora le attività</a>
+            <a class="btn btn-secondary" href="#crescita">Cosa mi ha lasciato</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Sintesi del percorso">
+          <div class="metric-row">
+            <div class="metric">
+              <strong>~3</strong>
+              <span>Anni di volontariato</span>
+            </div>
+            <div class="metric">
+              <strong>500h</strong>
+              <span>Servizio svolto</span>
+            </div>
+            <div class="metric">
+              <strong>10+</strong>
+              <span>Corsi completati</span>
+            </div>
+          </div>
+
+          <p class="panel-title">Tappe principali</p>
+          <div class="timeline-preview">
+            <article class="timeline-item">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <div>
+                <time>Inizio percorso</time>
+                <strong>Ingresso in CRI e prime attività di servizio</strong>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <div>
+                <time>Formazione continua</time>
+                <strong>BLSD, Operatore Sociale, OPEM, TSSA, LUCAS3 e altre certificazioni</strong>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-dot" aria-hidden="true"></span>
+              <div>
+                <time>Oggi</time>
+                <strong>Responsabile ICT e consigliere giovane cooptato nel direttivo</strong>
+              </div>
+            </article>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="storia">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">La mia storia</span>
+          <h2>Perché ho scelto la Croce Rossa</h2>
+          <p>
+            Ho scelto di diventare volontario perché volevo mettere il mio tempo e le mie competenze al servizio degli altri. Cercavo un'esperienza concreta, capace di unire utilità sociale, crescita personale e responsabilità reale, e nella Croce Rossa ho trovato tutto questo.
+          </p>
+        </div>
+
+        <div class="signature-block">
+          <article class="quote-card reveal">
+            <blockquote>
+              Fare volontariato per me significa esserci quando serve, con competenza, ascolto e spirito di servizio.
+            </blockquote>
+            <p>
+              Nel tempo questa scelta è diventata parte della mia identità: non solo un'attività extracurricolare, ma un ambiente in cui imparare a collaborare, decidere e crescere.
+            </p>
+          </article>
+
+          <div class="story-grid">
+            <article class="story-card reveal">
+              <h3>Motivazione iniziale</h3>
+              <p class="muted">
+                Volevo fare qualcosa di utile per il territorio, uscire dalla teoria e confrontarmi con situazioni vere, dove contano prontezza, affidabilità e attenzione verso le persone.
+              </p>
+            </article>
+            <article class="story-card reveal">
+              <h3>Esperienza umana</h3>
+              <p class="muted">
+                In Croce Rossa ho conosciuto realtà diverse tra loro, ho imparato ad ascoltare e a lavorare in squadra, scoprendo quanto il servizio abbia valore anche nei gesti più semplici.
+              </p>
+            </article>
+            <article class="story-card reveal">
+              <h3>Esperienza tecnica</h3>
+              <p class="muted">
+                La formazione sanitaria, sociale e operativa mi ha permesso di acquisire procedure, metodo e senso di responsabilità, applicando concretamente ciò che studio anche a scuola.
+              </p>
+            </article>
+            <article class="story-card reveal">
+              <h3>Visione futura</h3>
+              <p class="muted">
+                Questo percorso mi ha aiutato a capire meglio che tipo di persona e professionista voglio diventare: affidabile, preparato, capace di usare la tecnologia per risolvere problemi reali.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="attivita">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Attività svolte</span>
+          <h2>Un impegno trasversale tra salute, sociale, emergenze, giovani e ICT</h2>
+          <p>
+            Nel Comitato di Rivoli mi occupo di ambiti molto diversi tra loro. Questa varietà è uno degli aspetti più formativi del mio percorso, perché mi ha permesso di sviluppare competenze pratiche, relazionali e organizzative.
+          </p>
+        </div>
+
+        <div class="activities-wrap">
+          <section class="pillar reveal" aria-labelledby="salute-title">
+            <div class="pillar-head">
+              <div>
+                <span class="tag">Obiettivo Salute</span>
+                <h3 id="salute-title">Formazione sanitaria e supporto al soccorso</h3>
+              </div>
+            </div>
+            <div class="activity-list">
+              <article class="activity-item">
+                <h4>Corso BLSD</h4>
+                <p>Ho seguito il corso di Basic Life Support and Defibrillation per imparare le tecniche di rianimazione cardiopolmonare e l'uso del defibrillatore, conseguendo il brevetto regionale.</p>
+              </article>
+              <article class="activity-item">
+                <h4>Allegato A</h4>
+                <p>Sono attualmente corsista per ottenere la certificazione che mi consentirà di operare sulle ambulanze di base come volontario formato.</p>
+              </article>
+              <article class="activity-item">
+                <h4>Certificazione LUCAS3</h4>
+                <p>Ho ottenuto la certificazione per l'utilizzo del dispositivo LUCAS3, utile per fornire compressioni toraciche meccaniche continue durante le emergenze cardiache.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="pillar reveal" aria-labelledby="sociale-title">
+            <div class="pillar-head">
+              <div>
+                <span class="tag">Inclusione Sociale</span>
+                <h3 id="sociale-title">Ascolto, distribuzione e gestione</h3>
+              </div>
+            </div>
+            <div class="activity-list">
+              <article class="activity-item">
+                <h4>Sportello sociale</h4>
+                <p>Collaboro nell'ascolto e nella distribuzione di pacchi alimentari. In particolare gestisco il magazzino, la rendicontazione delle attività collegate ad AGEA e parte della reportistica annuale.</p>
+              </article>
+              <article class="activity-item">
+                <h4>Mense</h4>
+                <p>Dopo il corso da Operatore Sociale CRI ho potuto collaborare con le mense di Torino, distribuendo pasti e, in alcune occasioni, vestiti alle persone in difficoltà.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="pillar reveal" aria-labelledby="opem-title">
+            <div class="pillar-head">
+              <div>
+                <span class="tag">Operazioni ed Emergenze</span>
+                <h3 id="opem-title">Protezione civile, logistica e grandi eventi</h3>
+              </div>
+            </div>
+            <div class="activity-list">
+              <article class="activity-item">
+                <h4>Operatore di Emergenza CRI</h4>
+                <p>Questa qualifica mi ha permesso di iniziare ad operare nell'ambito della Protezione Civile, ampliando il mio raggio d'azione in contesti organizzativi e di supporto.</p>
+              </article>
+              <article class="activity-item">
+                <h4>Logistica</h4>
+                <p>Organizzo, assegno e mantengo in ordine materiali e magazzini del Comitato di Rivoli, così da garantire prontezza ed efficienza in caso di necessità.</p>
+              </article>
+              <article class="activity-item">
+                <h4>Attività a massiccio flusso</h4>
+                <p>Partecipo a feste, manifestazioni e grandi eventi, fornendo supporto al coordinamento e contribuendo al buon andamento dell'organizzazione sul campo.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="pillar reveal" aria-labelledby="giovani-title">
+            <div class="pillar-head">
+              <div>
+                <span class="tag">Obiettivo Giovani</span>
+                <h3 id="giovani-title">Formazione e coinvolgimento del territorio</h3>
+              </div>
+            </div>
+            <div class="activity-list">
+              <article class="activity-item">
+                <h4>Gruppo giovani</h4>
+                <p>Faccio parte del gruppo giovani del Comitato e partecipo alle attività rivolte ai ragazzi del territorio, con incontri formativi nelle scuole e nelle piazze.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="pillar reveal" aria-labelledby="sviluppo-title">
+            <div class="pillar-head">
+              <div>
+                <span class="tag">Obiettivo Sviluppo</span>
+                <h3 id="sviluppo-title">Responsabile ICT del Comitato</h3>
+              </div>
+            </div>
+            <div class="activity-list">
+              <article class="activity-item">
+                <h4>Gestione informatica</h4>
+                <p>Grazie ai miei studi ricopro la posizione di responsabile ICT del Comitato: amministro il gestionale, gestisco rete e dispositivi tramite dominio e supporto i volontari nei problemi informatici.</p>
+              </article>
+              <article class="activity-item">
+                <h4>Connessione con l'ITIS</h4>
+                <p>Questo ruolo collega direttamente scuola e volontariato: le competenze in informatica non restano teoriche, ma diventano strumenti concreti per migliorare l'organizzazione del Comitato.</p>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="percorso">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Percorso formativo</span>
+          <h2>Una crescita costruita corso dopo corso</h2>
+          <p>
+            La formazione è stata un elemento centrale del mio cammino in Croce Rossa. Ogni corso ha aggiunto un tassello diverso: sicurezza, soccorso, sociale, emergenze, alimentazione, tecnologia e responsabilità operativa.
+          </p>
+        </div>
+
+        <div class="timeline-full reveal" aria-label="Evoluzione del percorso">
+          <article class="timeline-row">
+            <span class="bullet" aria-hidden="true"></span>
+            <div class="story-card">
+              <h3>Accesso e prime basi</h3>
+              <p class="muted">Con il corso d'accesso e il corso di sicurezza ho costruito il fondamento del mio impegno: regole, valori associativi, responsabilità e corretto comportamento nel servizio.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <span class="bullet" aria-hidden="true"></span>
+            <div class="story-card">
+              <h3>Area sanitaria</h3>
+              <p class="muted">BLSD, TSSA, percorso verso Allegato A e formazione LUCAS3 rappresentano il lato più operativo del soccorso, dove precisione, calma e preparazione fanno la differenza.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <span class="bullet" aria-hidden="true"></span>
+            <div class="story-card">
+              <h3>Area sociale e giovani</h3>
+              <p class="muted">Il corso Operatore Sociale CRI e il Percorso Gioventù mi hanno permesso di affrontare il volontariato anche dal punto di vista educativo, relazionale e inclusivo.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <span class="bullet" aria-hidden="true"></span>
+            <div class="story-card">
+              <h3>Emergenze e competenze aggiuntive</h3>
+              <p class="muted">Con il corso Operatore di Emergenza CRI, HACCP e UAS OPEN A1/A3 ho ampliato il mio profilo, sviluppando versatilità e capacità di operare in contesti diversi.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="courses-grid" style="margin-top: 2rem;">
+          <article class="course-card reveal"><span class="course-index">Corso 01</span><h3>Corso d'accesso</h3><p class="muted">Ingresso in associazione e conoscenza dei principi fondamentali.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 02</span><h3>Corso BLSD</h3><p class="muted">Rianimazione cardiopolmonare e uso del defibrillatore.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 03</span><h3>Corso di sicurezza</h3><p class="muted">Procedure, tutela personale e gestione corretta dell'attività.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 04</span><h3>Percorso Gioventù</h3><p class="muted">Coinvolgimento, educazione e progettazione per i giovani.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 05</span><h3>Operatore Sociale CRI</h3><p class="muted">Ascolto, supporto alle fragilità e attività sul territorio.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 06</span><h3>Operatore di Emergenza CRI</h3><p class="muted">Protezione civile, logistica e risposta organizzata alle emergenze.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 07</span><h3>TSSA</h3><p class="muted">Trasporto sanitario e soccorso in ambulanza.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 08</span><h3>HACCP</h3><p class="muted">Igiene e sicurezza alimentare nelle attività con distribuzione pasti.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 09</span><h3>LUCAS3</h3><p class="muted">Utilizzo del dispositivo di rianimazione meccanica.</p></article>
+          <article class="course-card reveal"><span class="course-index">Corso 10</span><h3>UAS OPEN A1/A3</h3><p class="muted">Formazione di base sull'uso del drone in categoria aperta.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="crescita">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Crescita personale e professionale</span>
+          <h2>Quello che questa esperienza mi ha insegnato</h2>
+          <p>
+            Il volontariato non mi ha dato solo competenze tecniche. Mi ha insegnato anche a gestire responsabilità, tempi, relazioni e imprevisti, contribuendo alla mia maturazione come studente e come persona.
+          </p>
+        </div>
+
+        <div class="growth-grid">
+          <article class="growth-card reveal">
+            <h3>Responsabilità</h3>
+            <p class="muted">Essere presenti in servizio significa essere affidabili: rispettare ruoli, tempi, procedure e persone. Questa mentalità oggi influenza anche il mio approccio allo studio e ai progetti tecnici.</p>
+          </article>
+          <article class="growth-card reveal">
+            <h3>Lavoro di squadra</h3>
+            <p class="muted">In Croce Rossa nessuno lavora da solo. Ho imparato a coordinarmi, comunicare in modo chiaro, chiedere supporto quando serve e contribuire al risultato comune.</p>
+          </article>
+          <article class="growth-card reveal">
+            <h3>Problem solving</h3>
+            <p class="muted">Che si tratti di un magazzino da organizzare, di una rendicontazione da preparare o di un problema informatico da risolvere, ho sviluppato metodo e capacità di trovare soluzioni pratiche.</p>
+          </article>
+          <article class="growth-card reveal">
+            <h3>Connessione tra studio e realtà</h3>
+            <p class="muted">L'esperienza ICT nel Comitato mi ha dimostrato che l'informatica può avere un impatto diretto sul funzionamento di un'organizzazione e sull'efficienza del servizio.</p>
+          </article>
+        </div>
+
+        <div class="impact-grid" style="margin-top: 2rem;">
+          <article class="impact-card reveal">
+            <h3>Autonomia</h3>
+            <p class="muted">Ho imparato a prendere iniziative con maggiore consapevolezza.</p>
+          </article>
+          <article class="impact-card reveal">
+            <h3>Empatia</h3>
+            <p class="muted">Il contatto con le persone mi ha reso più attento ai bisogni degli altri.</p>
+          </article>
+          <article class="impact-card reveal">
+            <h3>Metodo</h3>
+            <p class="muted">La formazione ricevuta mi ha insegnato a ragionare per procedure e priorità.</p>
+          </article>
+          <article class="impact-card reveal">
+            <h3>Leadership</h3>
+            <p class="muted">Con il tempo ho assunto ruoli più attivi, fino alla partecipazione nel direttivo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="direttivo">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Direttivo</span>
+          <h2>Un nuovo livello di responsabilità</h2>
+          <p>
+            L'8 maggio 2026 sono stato cooptato dal Consiglio Direttivo come consigliere rappresentante dei giovani. Questo incarico segna un passaggio importante, perché mi permette di contribuire non solo nelle attività operative, ma anche nella pianificazione e nelle scelte strategiche del Comitato.
+          </p>
+        </div>
+
+        <article class="board-card reveal">
+          <h3>Rappresentare i giovani volontari</h3>
+          <p class="muted">
+            Partecipare ai consigli direttivi significa portare idee, bisogni e proposte della componente giovane, favorendo un maggiore coinvolgimento dei volontari più giovani e promuovendo iniziative che li rendano protagonisti.
+          </p>
+          <p class="muted" style="margin-top: 1rem;">
+            Per me questo ruolo è anche il risultato di un percorso di fiducia: dimostra che l'impegno costante, la disponibilità e la serietà possono trasformarsi in responsabilità concreta.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <section class="footer-cta reveal" aria-labelledby="conclusione-title">
+        <span class="eyebrow">Messaggio finale</span>
+        <h2 id="conclusione-title">La Croce Rossa mi ha insegnato che competenza e umanità devono andare insieme.</h2>
+        <p class="muted">
+          Questo capolavoro racconta il percorso con cui ho trasformato il volontariato in crescita personale, tecnica e civile. È un'esperienza che porto con me nel presente e che voglio continui a orientare anche il mio futuro.
+        </p>
+      </section>
+
+      <div class="footer-grid">
+        
+        <a class="btn btn-secondary" href="#home">Torna in alto</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.querySelector('[data-theme-toggle]');
+      const root = document.documentElement;
+      let theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      root.setAttribute('data-theme', theme);
+
+      function renderIcon(mode) {
+        return mode === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"></circle><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"></path></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"></path></svg>';
+      }
+
+      function syncButton(mode) {
+        toggle.innerHTML = renderIcon(mode);
+        toggle.setAttribute('aria-label', mode === 'dark' ? 'Passa al tema chiaro' : 'Passa al tema scuro');
+      }
+
+      syncButton(theme);
+      toggle.addEventListener('click', function () {
+        theme = theme === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', theme);
+        syncButton(theme);
+      });
+    })();
+  </script>
+</body>
+</html>
